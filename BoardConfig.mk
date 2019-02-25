@@ -147,7 +147,10 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 # Screen density
 TARGET_SCREEN_DENSITY := 440
 
-# Security patch level
+# Boot security patch level
+BOOT_SECURITY_PATCH = $(PLATFORM_SECURITY_PATCH)
+
+# Vendor security patch level
 VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 
 # Sepolicy
