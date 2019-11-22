@@ -33,4 +33,7 @@
      <string name="haptic_level_title">Nível</string>
      <string name="haptic_level_summary">A intensidade da vibração</string>
      <string name="haptic_level_summary_incompatible">O kernel não suporta este recurso</string>
+
+     <!-- FPS Counter -->
+     <string name="fps_info_title">Contador de FPS</string>
 </resources>
