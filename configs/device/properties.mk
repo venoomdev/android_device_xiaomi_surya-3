@@ -73,6 +73,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
    debug.sf.enable_hwc_vds=0 \
    debug.sf.latch_unsignaled=0 \
    debug.sf.disable_client_composition_cache=1 \
+   debug.media.transcoding.codec_max_operating_rate=120 \
    ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.sm6150.api30 \
    ro.vendor.display.ad=1 \
    ro.vendor.display.ad.sdr_calib_data=/vendor/etc/sdr_config.cfg \
