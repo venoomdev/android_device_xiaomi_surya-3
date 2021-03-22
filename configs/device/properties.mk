@@ -7,7 +7,7 @@ PRODUCT_SYSTEM_PROPERTIES += \
     ro.config.media_vol_default=8 \
     ro.config.media_vol_steps=25 \
     ro.config.vc_call_vol_default=5 \
-    ro.config.vc_call_vol_steps=10
+    ro.config.vc_call_vol_steps=6
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
