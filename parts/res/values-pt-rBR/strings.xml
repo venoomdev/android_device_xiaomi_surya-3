@@ -25,4 +25,12 @@
      <string name="refresh_medium">60Hz</string>
      <string name="refresh_high">90Hz</string>
      <string name="refresh_extreme">120Hz</string>
+
+     <!-- Haptic Level Settings -->
+     <string name="haptic_title">Controlador de vibração</string>
+     <string name="haptic_warning">Configurar uma vibração muito alta pode causar danos permanentes ao hardware, use por sua própria conta e risco</string>
+     <string name="haptic_summary">Personalize a intensidade da vibração</string>
+     <string name="haptic_level_title">Nível</string>
+     <string name="haptic_level_summary">A intensidade da vibração</string>
+     <string name="haptic_level_summary_incompatible">O kernel não suporta este recurso</string>
 </resources>
