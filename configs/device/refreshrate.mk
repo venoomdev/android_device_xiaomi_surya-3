@@ -13,8 +13,6 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.use_content_detection_for_refresh_rate=true
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    debug.sf.disable_backpressure=0 \
-    debug.sf.enable_gl_backpressure=1 \
     vendor.display.idle_time=0 \
     vendor.display.idle_time_inactive=0
 
@@ -64,8 +62,6 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     debug.sf.earlyGl.app.duration=16600000
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    debug.sf.disable_backpressure=0 \
-    debug.sf.enable_gl_backpressure=1 \
     vendor.display.idle_time=0 \
     vendor.display.idle_time_inactive=0
 endif
