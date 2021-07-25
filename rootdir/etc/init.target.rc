@@ -84,6 +84,7 @@ on post-fs-data
 # For cpusets initialize for Silver Only first and then Silver + Gold
 # Silver Only configuration cannot work with 0-7
 on boot
+    start mi_thermald
     chown system system /sys/kernel/hbtp/display_pwr
     start vendor.rmt_storage
     start rfs_access
@@ -166,6 +167,7 @@ service spdaemon /vendor/bin/spdaemon
     class core
     user system
     group system
+    seclabel u:r:mi_thermald:s0
 
 #service qosmgrd /system/bin/qosmgr /system/etc/qosmgr_rules.xml
 #   user system
