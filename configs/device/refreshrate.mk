@@ -14,7 +14,8 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.display.idle_time=0 \
-    vendor.display.idle_time_inactive=0
+    vendor.display.idle_time_inactive=0 \
+    vendor.display.disable_metadata_dynamic_fps=1
 
 # Enable app/sf phase offset as durations. The numbers below are translated from the existing
 # positive offsets by finding the duration app/sf will have with the offsets.
@@ -63,5 +64,6 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.display.idle_time=0 \
-    vendor.display.idle_time_inactive=0
+    vendor.display.idle_time_inactive=0 \
+    vendor.display.disable_metadata_dynamic_fps=1
 endif
