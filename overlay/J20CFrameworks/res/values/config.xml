@@ -579,4 +579,7 @@
 
     <!-- If not zero, limits the internal screen recorder's framerate to the set value. -->
     <integer name="config_screenRecorderMaxFramerate">90</integer>
+
+    <!-- Wheter device supports an gaming mode profiles -->
+    <bool name="config_gamingmode_performance">true</bool>
 </resources>
