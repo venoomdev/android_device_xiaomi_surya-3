@@ -52,6 +52,7 @@ public final class ThermalUtils {
     private static final String THERMAL_GAMING = "thermal.gaming=";
 
     private static final String THERMAL_SCONFIG = "/sys/class/thermal/thermal_message/sconfig";
+    private static final String PROP_GAME_MODE = "sys.performance.level";
 
     private boolean mTouchModeChanged;
 
@@ -136,6 +137,7 @@ public final class ThermalUtils {
         String value = getValue();
         String modes[];
         String state = THERMAL_STATE_DEFAULT;
+        boolean isInGameMode = SystemProperties.getInt(PROP_GAME_MODE, -1) > 0;
 
         if (value != null) {
             modes = value.split(":");
@@ -150,7 +152,9 @@ public final class ThermalUtils {
                 state = THERMAL_STATE_GAMING;
             }
         }
-        FileUtils.writeLine(THERMAL_SCONFIG, state);
+        if (!isInGameMode) {
+            FileUtils.writeLine(THERMAL_SCONFIG, state);
+        }
 
         if (state == THERMAL_STATE_BENCHMARK || state == THERMAL_STATE_GAMING) {
             updateTouchModes(packageName);
