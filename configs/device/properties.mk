@@ -65,7 +65,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_SYSTEM_PROPERTIES += \
     persist.lcd.hbm_mode=0 \
-    persist.lcd.cabc_mode=1
+    persist.lcd.cabc_mode=0
 
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
