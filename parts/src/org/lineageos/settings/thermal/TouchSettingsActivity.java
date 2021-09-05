@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2022 Paranoid Android
+ * Copyright (C) 2020 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,7 +32,7 @@ public class TouchSettingsActivity extends CollapsingToolbarBaseActivity {
         TouchSettingsFragment touchSettingsFragment = new TouchSettingsFragment();
         touchSettingsFragment.setArguments(getIntent().getExtras());
         getFragmentManager().beginTransaction().replace(R.id.content_frame,
-        touchSettingsFragment, TAG_TOUCH).commit();
+                touchSettingsFragment, TAG_TOUCH).commit();
     }
 
     @Override

@@ -49,7 +49,6 @@ public class TouchSettingsFragment extends PreferenceFragment
         }
 
         getActivity().setTitle(appName);
-
         mGameMode = (SwitchPreference) findPreference(Constants.PREF_TOUCH_GAME_MODE);
         mTouchResistant = (SeekBarPreference) findPreference(Constants.PREF_TOUCH_RESISTANT);
         mTouchResponse = (SeekBarPreference) findPreference(Constants.PREF_TOUCH_RESPONSE);

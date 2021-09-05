@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package org.lineageos.settings.thermal;
 
 import android.annotation.Nullable;
@@ -314,7 +315,7 @@ public class ThermalSettingsFragment extends PreferenceFragment
             holder.mode.setAdapter(new ModeAdapter(context));
             holder.mode.setOnItemSelectedListener(this);
             holder.touchIcon.setOnClickListener(v -> {
-            Intent intent = new Intent(getActivity(), TouchSettingsActivity.class);
+                Intent intent = new Intent(getActivity(), TouchSettingsActivity.class);
                 intent.putExtra("appName", entry.label);
                 intent.putExtra("packageName", entry.info.packageName);
                 startActivity(intent);

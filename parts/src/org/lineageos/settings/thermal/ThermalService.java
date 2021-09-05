@@ -50,7 +50,7 @@ public class ThermalService extends Service {
     public void onCreate() {
         if (DEBUG) Log.d(TAG, "Creating service");
         try {
-             ActivityTaskManager.getService().registerTaskStackListener(mTaskListener);
+            ActivityTaskManager.getService().registerTaskStackListener(mTaskListener);
         } catch (RemoteException e) {
             // Do nothing
         }
