@@ -170,10 +170,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.sys.thermal.data.path=/data/vendor/thermal/
 
-# WiFi
-PRODUCT_PROPERTY_OVERRIDES += \
-    wifi.aware.interface=wifi-aware0
-
 # Zygote
 PRODUCT_SYSTEM_PROPERTIES += \
     persist.device_config.runtime_native.usap_pool_enabled=true
