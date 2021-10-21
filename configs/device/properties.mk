@@ -203,3 +203,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.sdha_apps_bg_max=64 \
     ro.config.sdha_apps_bg_min=8 \
     ro.lmk.filecache_min_kb=153600
+
+# Recovery
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.binary_xml=false
