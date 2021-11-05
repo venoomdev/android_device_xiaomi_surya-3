@@ -70,7 +70,7 @@ PRODUCT_SYSTEM_PROPERTIES += \
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
    debug.hwui.renderer=skiagl \
-   debug.sf.enable_hwc_vds=1 \
+   debug.sf.enable_hwc_vds=0 \
    debug.sf.latch_unsignaled=0 \
    debug.sf.disable_client_composition_cache=1 \
    ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.sm6150.api30 \
