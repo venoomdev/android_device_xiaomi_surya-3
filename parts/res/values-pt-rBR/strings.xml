@@ -20,12 +20,12 @@
      <string name="lcd_cabc_medium">Médio (Vídeos)</string>
      <string name="lcd_cabc_high">Alto (Imagens)</string>
  
-     <!-- Refresh Rate per-app -->
+     <!-- Per-app refresh rate -->
      <string name="refresh_title">Taxa de atualização por aplicativo</string>
      <string name="refresh_summary">Defina uma taxa de atualizacão especifica para cada aplicativo</string>
      <string name="refresh_default">Padrão</string>
-     <string name="refresh_medium">Média (60Hz)</string>
-     <string name="refresh_high">Alta (90Hz)</string>
-     <string name="refresh_extreme">Extrema (120Hz)</string>
+     <string name="refresh_medium">60Hz</string>
+     <string name="refresh_high">90Hz</string>
+     <string name="refresh_extreme">120Hz</string>
 
 </resources>
