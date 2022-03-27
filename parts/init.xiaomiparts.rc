@@ -13,7 +13,6 @@
 # limitations under the License.
 
 on boot
-
 # LCD Features
     chown system system /sys/devices/platform/soc/soc:qcom,dsi-display/cabc
     chmod 0660 /sys/devices/platform/soc/soc:qcom,dsi-display/cabc
@@ -22,11 +21,10 @@ on boot
 
 on property:persist.lcd.hbm_mode=*
     write /sys/devices/platform/soc/soc:qcom,dsi-display/hbm ${persist.lcd.hbm_mode}
-
 on property:persist.lcd.cabc_mode=*
     write /sys/devices/platform/soc/soc:qcom,dsi-display/cabc ${persist.lcd.cabc_mode}
 
-# Game Mode and Touch Profiles
+# Touchscreen and Gaming Profiles
 on property:sys.perf_profile=1
     write /dev/stune/top-app/schedtune.boost 10
     write /sys/class/kgsl/kgsl-3d0/devfreq/adrenoboost 2
