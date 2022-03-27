@@ -4,8 +4,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Firmware Surya
-$(call inherit-product, vendor/xiaomi-firmware/surya/Android.mk)
+# Firmware
+$(call inherit-product, vendor/xiaomi-firmware/Android.mk)
 
 # Device configs makefiles
 $(call inherit-product, $(LOCAL_PATH)/configs/device/hidl_vendor.mk)
@@ -14,9 +14,6 @@ $(call inherit-product, $(LOCAL_PATH)/configs/device/properties.mk)
 
 # Inherit from the proprietary configuration
 $(call inherit-product, vendor/xiaomi/surya/surya-vendor.mk)
-
-# Inherit Google Camera
-$(call inherit-product, vendor/xiaomi/miatoll-gcam/miatoll-gcam-vendor.mk)
 
 # ANT+
 PRODUCT_PACKAGES += \
@@ -40,6 +37,9 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio@2.1-impl
 
 # Camera
+PRODUCT_PACKAGES += \
+    GoogleCamera
+
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service_64
@@ -206,6 +206,11 @@ PRODUCT_COPY_FILES += \
 # Platform
 MSMSTEPPE := sm6150
 TARGET_BOARD_PLATFORM := $(MSMSTEPPE)
+PRODUCT_BOARD_PLATFORM := $(MSMSTEPPE)
+
+# Qualcomm
+BOARD_USES_QCOM_HARDWARE := true
+PRODUCT_USES_QCOM_HARDWARE := true
 
 # QC common
 TARGET_COMMON_QTI_COMPONENTS := \
