@@ -89,6 +89,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_SYSTEM_PROPERTIES += \
    debug.cpurend.vsync=false
 
+# Dynamic FPS
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.smart_dfps.enable=false
+
 # DPM
 PRODUCT_PROPERTY_OVERRIDES += \
    persist.vendor.dpmhalservice.enable=1 \
