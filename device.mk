@@ -178,19 +178,14 @@ PRODUCT_COPY_FILES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-    AOSPSuryaFrameworks \
-    AOSPSuryaSettings \
+    J20CFrameworks \
+    J20CSettings \
+    J20CSystemUI \
     KarnaFrameworks \
     KarnaWifiOverlay \
-    KarnaSettingsProviderOverlay \
-    SuryaNoCutoutOverlay \
     NotchBarKiller \
     SuryaFrameworks \
-    SuryaSystemUI \
-    SuryaWifiOverlay \
-    SuryaChargingOverlay \
-    SuryaSettingsLibOverlay \
-    SuryaSettingsProviderOverlay
+    SuryaWifiOverlay
 
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
