@@ -27,12 +27,14 @@ import androidx.annotation.Nullable;
 
 import org.lineageos.settings.dirac.DiracActivity;
 import org.lineageos.settings.display.LcdFeaturesPreferenceActivity;
+import org.lineageos.settings.doze.DozeSettingsActivity;
 
 public class TileEntryActivity extends Activity {
     private static final String TAG = "TileEntryActivity";
     private static final String DIRAC_TILE = "org.lineageos.settings.dirac.DiracTileService";
     private static final String CABC_TILE = "org.lineageos.settings.display.CabcTileService";
     private static final String HBM_TILE = "org.lineageos.settings.display.HbmTileService";
+    private static final String DOZE_TILE = "org.lineageos.settings.doze.DozeTileService";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -48,6 +50,9 @@ public class TileEntryActivity extends Activity {
             case HBM_TILE:
                 openActivitySafely(new Intent(this, LcdFeaturesPreferenceActivity.class));
                 break;
+            case DOZE_TILE:
+                openActivitySafely(new Intent(this, DozeSettingsActivity.class));
+                break;    
             default:
                 finish();
                 break;
