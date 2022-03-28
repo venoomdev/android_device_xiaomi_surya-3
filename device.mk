@@ -152,8 +152,7 @@ PRODUCT_COPY_FILES += \
 # Namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    vendor/xiaomi-firmware \
-    hardware/xiaomi
+    vendor/xiaomi-firmware
 
 # NFC
 PRODUCT_PACKAGES += \
