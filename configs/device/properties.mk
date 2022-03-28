@@ -48,14 +48,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Dalvik
 PRODUCT_SYSTEM_PROPERTIES += \
-     dalvik.vm.dex2oat64.enabled=true
+    dalvik.vm.dex2oat64.enabled=true \
+    pm.dexopt.first-boot=quicken \
+    pm.dexopt.bg-dexopt=everything
 
-# Dexopt
-PRODUCT_SYSTEM_PROPERTIES += \
-     pm.dexopt.first-boot=quicken
-     pm.dexopt.bg-dexopt=everything
-
-# Device Settings
+# Dirac
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.audio.soundfx.dirac=true \
     persist.audio.dirac.speaker=true \
@@ -63,34 +60,38 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.dirac.acs.storeSettings=1 \
     persist.dirac.acs.ignore_error=1
 
+# LCD Features    
 PRODUCT_SYSTEM_PROPERTIES += \
     persist.lcd.hbm_mode=0 \
     persist.lcd.cabc_mode=0
 
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
-   debug.hwui.renderer=skiagl \
-   debug.sf.enable_hwc_vds=0 \
-   debug.sf.latch_unsignaled=0 \
-   debug.sf.disable_client_composition_cache=1 \
-   debug.media.transcoding.codec_max_operating_rate_720P=240 \
-   debug.media.transcoding.codec_max_operating_rate_1080P=120 \
-   ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.sm6150.api30 \
-   ro.vendor.display.ad=1 \
-   ro.vendor.display.ad.sdr_calib_data=/vendor/etc/sdr_config.cfg \
-   ro.vendor.display.ad.hdr_calib_data=/vendor/etc/hdr_config.cfg \
-   ro.vendor.display.sensortype=2 \
-   ro.surface_flinger.protected_contents=true \
-   vendor.display.disable_idle_time_hdr=1 \
-   vendor.display.disable_idle_time_video=1 \
-   vendor.display.disable_rotator_downscale=1
+    ro.vendor.display.ad=1 \
+    ro.vendor.display.ad.sdr_calib_data=/vendor/etc/sdr_config.cfg \
+    ro.vendor.display.ad.hdr_calib_data=/vendor/etc/hdr_config.cfg \
+    ro.vendor.display.sensortype=2 \
+    vendor.display.disable_idle_time_hdr=1 \
+    vendor.display.disable_idle_time_video=1
 
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.surface_flinger.has_wide_color_display=false
 
-# Disable vsync for cpu rendered apps
+# Graphics
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.hwui.renderer=skiagl \
+    debug.sf.enable_hwc_vds=0 \
+    debug.sf.latch_unsignaled=0 \
+    debug.sf.disable_client_composition_cache=1 \
+    debug.media.transcoding.codec_max_operating_rate_720P=240 \
+    debug.media.transcoding.codec_max_operating_rate_1080P=120 \
+    ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.sm6150.api30 \
+    ro.surface_flinger.protected_contents=true \
+    vendor.display.disable_rotator_downscale=1
+
+# VSync
 PRODUCT_SYSTEM_PROPERTIES += \
-   debug.cpurend.vsync=false
+    debug.cpurend.vsync=false
 
 # Dynamic FPS
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -98,10 +99,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # DPM
 PRODUCT_PROPERTY_OVERRIDES += \
-   persist.vendor.dpmhalservice.enable=1 \
-   persist.vendor.dpm.idletimer.mode=default \
-   persist.vendor.dpm.nsrm.bkg.evt=3955 \
-   persist.vendor.dpmhalservice.enable=1
+    persist.vendor.dpmhalservice.enable=1 \
+    persist.vendor.dpm.idletimer.mode=default \
+    persist.vendor.dpm.nsrm.bkg.evt=3955 \
+    persist.vendor.dpmhalservice.enable=1
 
 # DRM
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -119,17 +120,17 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # IMS
 PRODUCT_PROPERTY_OVERRIDES += \
-   persist.dbg.volte_avail_ovr=1 \
-   persist.dbg.vt_avail_ovr=1 \
-   persist.dbg.wfc_avail_ovr=1
+    persist.dbg.volte_avail_ovr=1 \
+    persist.dbg.vt_avail_ovr=1 \
+    persist.dbg.wfc_avail_ovr=1
 
 # Incremental FS
 PRODUCT_PROPERTY_OVERRIDES += \
-   ro.incremental.enable=1
+    ro.incremental.enable=1
 
 # IORap
 PRODUCT_PRODUCT_PROPERTIES += \
-   persist.device_config.runtime_native_boot.iorap_readahead_enable=true
+    persist.device_config.runtime_native_boot.iorap_readahead_enable=true
 
 # IWLAN
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -162,13 +163,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.report_codec=1 \
     ro.telephony.default_network=22,20
 
-# Qcom
+# Qualcomm
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.qcomsysd.enabled=1
 
 # Sensors
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.sensors.enable.mag_filter=true
+    persist.vendor.sensors.enable.mag_filter=true \
     debug.sensors.diag_buffer_log=false
 
 # Thermal
