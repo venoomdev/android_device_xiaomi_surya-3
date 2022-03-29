@@ -83,9 +83,13 @@ TARGET_KERNEL_SOURCE := kernel/xiaomi/surya
 TARGET_KERNEL_VERSION := 4.14
 
 TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_USE_LATEST_CLANG := true
+TARGET_KERNEL_CLANG_VERSION := azure
 TARGET_KERNEL_ADDITIONAL_FLAGS := LD=ld.lld AR=llvm-ar AS=llvm-as NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip
 TARGET_KERNEL_ADDITIONAL_FLAGS := HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
+
+# Cross Compile
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-gnu-
+TARGET_KERNEL_CROSS_COMPILE_ARM32_PREFIX := arm-linux-gnueabi-
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
